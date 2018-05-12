@@ -7,7 +7,7 @@ dataFile <- "household_power_consumption.txt"
 time <- strptime(paste(subSetData$Date, subSetData$Time, sep=" "), "%d/%m/%Y %H:%M:%S")  
  glob_active_power <- as.numeric(subSetData$Global_active_power) 
 
-#Plotting and saving variables
+#Plotting and saving plot
  png("plot2.png", width=480, height=480) 
  plot(time,  glob_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)") 
  dev.off() 
